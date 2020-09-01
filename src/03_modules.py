@@ -13,7 +13,8 @@ import sys
 # for line in fileinput.input():
 #     print(line)
 
-print(sys.argv[0])
+for arg in sys.argv:
+    print(arg, end='\n')
 
 # Print out the OS platform you're using:
 print(sys.platform)
@@ -26,7 +27,7 @@ import os
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
-# YOUR CODE HERE
+print(os.getpid())
 
 # Print the current working directory (cwd):
 # YOUR CODE HERE
