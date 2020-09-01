@@ -17,3 +17,18 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+
+
+def average(*numlist):
+    sum = 0
+
+    for num in numlist:
+        sum = sum + num
+    
+    sum = sum - min(numlist)
+    sum = sum - max(numlist)
+
+    return sum // (len(numlist) - 2)
+
+print(average(1, 2, 3, 4, 5))
+
