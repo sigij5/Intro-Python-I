@@ -9,26 +9,24 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
-# YOUR CODE HERE
+with open('foo.txt') as f:
+    print(f.read())
+
+f.closed
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
-# YOUR CODE HERE
+# with open('bar.text') as f:
+#     f.write('This is the beginning of a new file' \n)
 
+f = open('bar.txt', 'w')
+f.write("This is the beginning of a new file \nA very special file \nDo not lose")
+f.close()
 
-def average(*numlist):
-    sum = 0
+with open('bar.txt') as f:
+    print(f.read())
 
-    for num in numlist:
-        sum = sum + num
-    
-    sum = sum - min(numlist)
-    sum = sum - max(numlist)
-
-    return sum // (len(numlist) - 2)
-
-print(average(1, 2, 3, 4, 5))
-
+f.closed
